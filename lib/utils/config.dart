@@ -20,9 +20,9 @@ class Config {
   }
 
   //define spacer
-  static const spaceSmall = SizedBox(height: 25);
-  static final spaceMedium = SizedBox(height: screenHeight! * 0.05);
-  static final spaceBig = SizedBox(height: screenHeight! * 0.08);
+  static const spaceSmall = SizedBox(height: 15);
+  static final spaceMedium = SizedBox(height: screenHeight! * 0.03);
+  static final spaceBig = SizedBox(height: screenHeight! * 0.05);
 
   //textField border
   static const outlineBorder =
