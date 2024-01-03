@@ -1,3 +1,6 @@
+import 'package:doctor_appointment/main_layout_screen.dart';
+import 'package:doctor_appointment/screens/auth_screen.dart';
+import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,10 +20,32 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       title: 'Doctor\'s',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
+          inputDecorationTheme: const InputDecorationTheme(
+            focusColor: Config.primaryColor,
+            border: Config.outlineBorder,
+            focusedBorder: Config.focusBorder,
+            errorBorder: Config.errorBorder,
+            enabledBorder: Config.outlineBorder,
+            floatingLabelStyle: TextStyle(
+              color: Config.primaryColor,
+            ),
+            prefixIconColor: Colors.black,
+          ),
+          scaffoldBackgroundColor: Colors.white,
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            backgroundColor: Config.primaryColor,
+            selectedItemColor: Colors.white,
+            showSelectedLabels: true,
+            unselectedItemColor: Colors.grey.shade700,
+            showUnselectedLabels: false,
+            elevation: 10,
+            type: BottomNavigationBarType.fixed,
+          )),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const AuthScreen(),
+        '/main': (context) => const MainLayoutScreen()
+      },
     );
   }
 }
