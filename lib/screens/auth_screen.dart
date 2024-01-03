@@ -1,4 +1,5 @@
 import 'package:doctor_appointment/components/login_form.dart';
+import 'package:doctor_appointment/components/social_button.dart';
 import 'package:doctor_appointment/utils/config.dart';
 import 'package:doctor_appointment/utils/text.dart';
 import 'package:flutter/material.dart';
@@ -45,15 +46,36 @@ class _AuthScreenState extends State<AuthScreen> {
           Config.spaceSmall,
           Center(
             child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  AppText.enText['forget_password_text']!,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                )),
+              onPressed: () {},
+              child: Text(
+                AppText.enText['forget_password_text']!,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+          ),
+          const Spacer(),
+          Center(
+            child: Text(
+              AppText.enText['social_login_text']!,
+              style: const TextStyle(
+                fontSize: 16,
+                // fontWeight: FontWeight.bold,
+                color: Colors.grey,
+              ),
+            ),
+          ),
+          Config.spaceSmall,
+          // Config.spaceSmall,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SocialButton(social: 'google'),
+              SocialButton(social: 'facebook'),
+            ],
           )
         ],
       )),
