@@ -61,7 +61,9 @@ class _LogInFormState extends State<LogInForm> {
               width: double.infinity,
               title: 'Log In',
               disable: false,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('/main');
+              },
             ),
           ],
         ));
