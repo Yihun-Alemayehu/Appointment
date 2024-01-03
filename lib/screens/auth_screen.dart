@@ -57,6 +57,28 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
             ),
           ),
+          Row(
+            children: [
+              Text(
+                AppText.enText['signUp_text']!,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              Text(
+                AppText.enText['signup_text_two']!,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
           const Spacer(),
           Center(
             child: Text(
@@ -70,13 +92,15 @@ class _AuthScreenState extends State<AuthScreen> {
           ),
           Config.spaceSmall,
           // Config.spaceSmall,
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SocialButton(social: 'google'),
               SocialButton(social: 'facebook'),
             ],
-          )
+          ),
+          Config.spaceSmall,
+          Config.spaceSmall,
         ],
       )),
     ));

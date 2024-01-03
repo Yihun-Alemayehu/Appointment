@@ -1,5 +1,3 @@
-
-
 class AppText {
   static final enText = {
     'welcome_text': 'Welcome',
@@ -10,5 +8,6 @@ class AppText {
     'signUp_text': 'Don\'t have an account ?',
     'social_login_text': 'Or continue with social account',
     'forget_password_text': 'Forget your password?',
+    'signup_text_two': 'Sign up',
   };
 }

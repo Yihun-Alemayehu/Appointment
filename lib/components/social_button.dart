@@ -12,9 +12,16 @@ class SocialButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
+      // style: OutlinedButton.styleFrom(
+      //   padding: EdgeInsets.symmetric(vertical: 15),
+      //   side: const BorderSide(
+      //     width: 1,
+      //     color: Colors.black,
+      //   ),
+      // ),
       onPressed: () {},
       child: SizedBox(
-        width: Config.widthSize.width,
+        width: MediaQuery.of(context).size.width * 0.3,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
