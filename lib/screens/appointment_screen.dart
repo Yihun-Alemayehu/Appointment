@@ -56,7 +56,7 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
       return schedule['status'] == status;
     }).toList();
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 219, 229, 237),
+      backgroundColor: Config.bgColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 40, top: 20, right: 25),

@@ -11,9 +11,16 @@ class _AppointmentCardState extends State<AppointmentCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // decoration: BoxDecoration(
+      //   borderRadius: BorderRadius.circular(50),
+      // ),
       width: double.infinity,
       child: Card(
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(50),
+        // ),
         child: Material(
+          borderRadius: BorderRadius.circular(20),
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: Column(

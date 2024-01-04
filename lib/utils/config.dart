@@ -43,4 +43,5 @@ class Config {
   );
 
   static const primaryColor = Colors.black;
+  static const bgColor = Color.fromARGB(255, 219, 229, 237);
 }
