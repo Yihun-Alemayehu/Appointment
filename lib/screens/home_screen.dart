@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:doctor_appointment/components/appointment_card.dart';
 import 'package:doctor_appointment/components/doctor_card.dart';
 import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
@@ -194,6 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Config.spaceSmall,
+              const AppointmentCard(),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Row(
