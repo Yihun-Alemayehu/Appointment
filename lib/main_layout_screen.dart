@@ -1,6 +1,7 @@
 import 'package:doctor_appointment/main.dart';
 import 'package:doctor_appointment/screens/appointment_screen.dart';
 import 'package:doctor_appointment/screens/auth_screen.dart';
+import 'package:doctor_appointment/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -15,7 +16,7 @@ class MainLayoutScreen extends StatefulWidget {
 class _MainLayoutScreenState extends State<MainLayoutScreen> {
   int _selectedTab = 0;
   List pages = const [
-    HomePage(),
+    HomeScreen(),
     AppointmentScreen(),
     HomePage(),
     AppointmentScreen(),
