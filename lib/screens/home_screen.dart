@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -147,7 +148,63 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }).toList(),
               ),
-            )
+            ),
+            Config.spaceSmall,
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    'Categories',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  Spacer(),
+                  Text('See All'),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List<Widget>.generate(
+                  medCat.length,
+                  (index) => Container(
+                    width: 120,
+                    height: 120,
+                    child: (Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          FaIcon(medCat[index]['icon']),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(medCat[index]['category'])
+                        ],
+                      ),
+                    )),
+                  ),
+                ),
+              ),
+            ),
+            Config.spaceSmall,
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    'Available Doctor\'s',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  Spacer(),
+                  Text('See All'),
+                ],
+              ),
+            ),
           ],
         )),
       ),
