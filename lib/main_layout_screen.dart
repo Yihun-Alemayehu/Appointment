@@ -18,7 +18,7 @@ class _MainLayoutScreenState extends State<MainLayoutScreen> {
   List pages = const [
     HomeScreen(),
     AppointmentScreen(),
-    HomePage(),
+    AuthScreen(),
     AppointmentScreen(),
     AuthScreen(),
   ];

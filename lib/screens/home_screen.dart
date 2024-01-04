@@ -216,9 +216,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   children: List<Widget>.generate(
                     6,
-                    (index) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: (DoctorCard()),
+                    (index) => const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: (DoctorCard(
+                        route: '/doc_details',
+                      )),
                     ),
                   ),
                 ),

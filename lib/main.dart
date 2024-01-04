@@ -1,5 +1,6 @@
 import 'package:doctor_appointment/main_layout_screen.dart';
 import 'package:doctor_appointment/screens/auth_screen.dart';
+import 'package:doctor_appointment/screens/doctor_details.dart';
 import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      title: 'Doctor\'s',
+      title: 'Doctor',
       theme: ThemeData(
           inputDecorationTheme: const InputDecorationTheme(
             focusColor: Config.primaryColor,
@@ -44,22 +45,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const AuthScreen(),
-        '/main': (context) => const MainLayoutScreen()
+        '/main': (context) => const MainLayoutScreen(),
+        '/doc_details': (context) => const DoctorDetail(),
       },
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: Container(),
     );
   }
 }
