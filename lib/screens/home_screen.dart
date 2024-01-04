@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   Text(
-                    'Available Doctor\'s',
+                    'Available Doctor',
                     style: TextStyle(
                       fontSize: 20,
                     ),
