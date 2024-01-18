@@ -50,7 +50,7 @@ class _DoctorDetailState extends State<DoctorDetail> {
                   title: 'Book Appointment',
                   disable: false,
                   onPressed: () {
-                    Navigator.of(context).pushNamed('booking_screen');
+                    Navigator.of(context).pushNamed('/booking_screen');
                   }),
             )
           ],

@@ -11,7 +11,6 @@ class BookingScreen extends StatefulWidget {
 }
 
 class _BookingScreenState extends State<BookingScreen> {
-
   CalendarFormat _format = CalendarFormat.month;
   DateTime _focusDay = DateTime.now();
   DateTime _currentDay = DateTime.now();
@@ -27,6 +26,25 @@ class _BookingScreenState extends State<BookingScreen> {
         appTitle: 'Appointment',
         icon: FaIcon(Icons.arrow_back_ios),
       ),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _tableCalendar() {
+    return TableCalendar(
+      focusedDay: _focusDay,
+      firstDay: DateTime.now(),
+      lastDay: DateTime(2024,12,31),
+      calendarFormat: _format,
+      currentDay: _currentDay,
+      rowHeight: 48,
+      calendarStyle: const CalendarStyle(),
     );
   }
 }
