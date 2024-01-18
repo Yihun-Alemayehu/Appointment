@@ -1,3 +1,4 @@
+import 'package:doctor_appointment/components/button.dart';
 import 'package:doctor_appointment/components/custom_appbar.dart';
 import 'package:doctor_appointment/utils/config.dart';
 import 'package:flutter/material.dart';
@@ -36,10 +37,20 @@ class _DoctorDetailState extends State<DoctorDetail> {
           ),
         ],
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           children: [
-            AboutDoctor(),
+            const AboutDoctor(),
+            const DetailBody(),
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: MyButton(
+                  width: double.infinity,
+                  title: 'Book Appointment',
+                  disable: false,
+                  onPressed: () {}),
+            )
           ],
         ),
       ),
@@ -103,7 +114,6 @@ class AboutDoctor extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          DetailBody(),
         ],
       ),
     );
@@ -123,6 +133,26 @@ class DetailBody extends StatelessWidget {
         children: [
           Config.spaceSmall,
           DoctorInfo(),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            'About Doctor',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+            ),
+          ),
+          Config.spaceSmall,
+          Text(
+            'Dr. Robel yonas is lorem i lorem ipsum dolor sit amet, consectetur adip e partur lorem i lorem ipsum dolor sit amet, consectetur adip e partur lorem i lorem ipsum dolor sit amet, consectetur adip e partur',
+            style: TextStyle(
+              height: 1.5,
+            ),
+            softWrap: true,
+            textAlign: TextAlign.justify,
+          ),
+          Text(''),
         ],
       ),
     );
@@ -135,7 +165,26 @@ class DoctorInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      children: [],
+      children: [
+        InfoCard(
+          label: 'Patients',
+          value: '100',
+        ),
+        SizedBox(
+          width: 15,
+        ),
+        InfoCard(
+          label: 'Experience',
+          value: '5 years',
+        ),
+        SizedBox(
+          width: 15,
+        ),
+        InfoCard(
+          label: 'Rating',
+          value: '4.5',
+        ),
+      ],
     );
   }
 }
