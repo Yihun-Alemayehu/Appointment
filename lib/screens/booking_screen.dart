@@ -118,7 +118,9 @@ class _BookingScreenState extends State<BookingScreen> {
                 width: double.infinity,
                 title: 'Make Appointment',
                 disable: _timeSelected && _dateSelected ? false : true,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/booked_screen');
+                },
               ),
             ),
           )
