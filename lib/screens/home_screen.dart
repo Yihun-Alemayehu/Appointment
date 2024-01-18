@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         return Container(
                           width: 300,
                           child: Card(
-                            color: Colors.blueAccent.shade700,
+                            color: Colors.blue[900],
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
