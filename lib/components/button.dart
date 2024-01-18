@@ -20,7 +20,8 @@ class MyButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.blue[900],
+          
         ),
         onPressed: disable ? null : onPressed,
         child: Text(
@@ -29,7 +30,6 @@ class MyButton extends StatelessWidget {
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            
           ),
         ),
       ),
